@@ -62,8 +62,8 @@ function t235__next() {
               elem.style.opacity = 0;
             
               if (ms) {
-                let opacity = 0;
-                const timer = setInterval(function() {
+                var opacity = 0;
+                var timer = setInterval(function() {
                   opacity += 50 / ms;
                   if (opacity >= 1) {
                     clearInterval(timer);
@@ -80,7 +80,7 @@ function t235__next() {
             if (disappeared) {
               function fadeOut(el, ms) {
                 if (ms) {
-                  el.style.transition = `opacity ${ms} ms`;
+                  el.style.transition = "opacity " + ms + "ms";
                   el.addEventListener(
                     'transitionend',
                     function() {
