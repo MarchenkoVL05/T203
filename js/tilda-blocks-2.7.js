@@ -34,10 +34,18 @@ function t235__next() {
           var speed = "slow";
           if (cur == 0) {
             speed = 0;
-          }
+          } 
 
           el.style.display = "block";
+          el.style.position = "absolute";
           el.style.opacity = "0";
+          el.style.textAlign = "center";
+          el.style.marginLeft = "auto";
+          el.style.marginRight = "auto";
+          el.style.left = "0";
+          el.style.right = "0";
+          el.style.top = "36%";
+          el.style.bottom = "0";
           if (parseFloat(getComputedStyle(el, null).height.replace("px", "")) + 100 > window.document.documentElement.clientHeight) {el.style.transform = "TranslateY(0px)"};
           el.style.transition = "all 500ms ease-out";
           el.style.transform = "TranslateY(50px)";
