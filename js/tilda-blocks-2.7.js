@@ -55,7 +55,6 @@ function t235__next() {
           el.style.transform = "TranslateY(50px)";
           el.addEventListener("transitionend", function() {
             el.style.display = "block";
-            el.style.opacity = "0";
             el.style.transition = "all 500ms ease";
             el.style.transform = "TranslateY(0px)";
             el.style.opacity = "1";
@@ -141,12 +140,13 @@ function t235__next() {
     Array.prototype.forEach.call(notSlideArray, function (el, i) {
         if (cur + 1 == i) {
           el.style.display = "none";
+          el.style.opacity = "0";
         }
 
         if (cur == i) {
           el.style.display = "block";
-          el.style.opacity = "0";
-          el.style.transition = "transform 1s easeOutSine,opacity 50ms";
+          el.style.transition = "transform 1s ease-in-out";
+          el.style.transition = "opacity 50ms";
           el.style.transform = "TranslateY(0px)";
           if (el.style.opacity == "0") {
             el.style.opacity = "1";
